@@ -1,0 +1,39 @@
+ You are about to create the software of a coffee machine.
+ The piece which decides which ingredients needed for the selected type of coffee.
+ The user press a button on the coffee machine to select the coffee type he/she wanted.
+ The available coffee types and their ingredients are as follows:
+
+ Espresso
+    Coffee
+    Sugar
+ Cappuccino
+    Coffee
+    Milk
+    Sugar
+ Americano
+    Coffee
+    Water
+    Sugar
+
+ To make the software later extendable with other coffee types you decided to
+ create an abstract CoffeeType class with an abstract List<String> getIngredients() method
+ which will return the needed ingredients to the specific coffee type.
+ And a Factory pattern which returns the Correct CoffeeType instance
+ based on the pressed button.
+ Tasks
+
+ Create the Espresso class which extends CoffeeType class and implement the
+ getIngredients method to return the required ingredients in the appropriate order.
+ For example in this case you need to return a new List<String> instance
+ which contains the following ingredients: "Coffee", "Sugar".
+
+ Create the Cappuccino class which extends CoffeeType class and implement
+ the getIngredients method to return the required ingredients in the appropriate order.
+
+ Create the Americano class which extends CoffeeType class and implement
+ the getIngredients method to return the required ingredients in the appropriate order.
+
+ Implement the CoffeeTypeFactory's create(int pressedButtonNumber)
+ to return the appropriate implementation.
+ For example if the user presses Button 2 you need to return a new instance of Cappuccino.
+ If an unknown number is given then the method needs to throw an IllegalArgumentException;
